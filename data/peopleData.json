@@ -1,0 +1,23 @@
+[
+  {
+    "id": 0,
+    "nickname": "SadBoy",
+    "email": "ibadtoff@gmail.com",
+    "password": "qwertyui",
+    "key": "a2234fds"
+  },
+  {
+    "id": 1,
+    "nickname": "GoodBoy",
+    "email": "goodBoy@gmail.com",
+    "password": "q123y432",
+    "key": "xczvxvc2"
+  },
+  {
+    "id": 2,
+    "nickname": "BigBoy",
+    "email": "boyboy@gmail.com",
+    "password": "asdfgfh2",
+    "key": "1233ewas"
+  }
+]

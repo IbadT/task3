@@ -1,0 +1,59 @@
+# описание конфигурации swagger
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# # В самом его начале указывается формат запросов и ответов:
+# # формат тела запроса, который клиент может отправить (Content-Type)
+# consumes:
+#   -application/json
+# # формат ответа клиенту (Accepts)
+# produces:
+#   -application/json
+
+# # Далее следует описание маршрута:
+# paths:
+#     /api/users/getUsers:
+#         # название файла контроллера ↓
+#         x-swagger-router-controller: hello_world  
+#         get:
+#             description: Returns all users
+#             # метод контроллера:
+#             # operationId - функция в этом контроллере, которая обрабатывает данный запрос ↓
+#             operationId: hello
+#             # parameters - перечень необходимых параметров ↓
+#             parameters:
+#                 - name: name
+#                 in: query
+#                 description: The name of the person to whom to say hello
+#                 required: false
+#                 type: string
+#             # responses - список возможных ответов сервера ↓
+#             responses:
+# # Для статуса "200" через ссылку $ref определена схема HelloWorldResponse, 
+# # а для ошибки - ErrorResponse
+#                 "200":
+#                     description: Success
+#                     schema:
+#                         # ссылка на определение
+#                         $ref: "#/definitions/HelloWorldResponse"
+#                 # могут быть и ошибки
+#                 default:
+#                     description: Error
+#                     schema:
+#                         $ref: "#/definitions/ErrorResponse"
